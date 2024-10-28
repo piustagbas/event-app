@@ -589,7 +589,7 @@ const Eventhistory = () => {
       )}
 
       <div className="Menudiv flex w-[375px] h-[98px] justify-center items-center mb-3 text-[#64748B] sm:hidden">
-        <div className="flex w-[350px] justify-between h-[64px]">
+        <div className="flex w-[350px] justify-between h-[64px] mr-3">
           <div className="mobilemenu flex flex-col  w-[62.5px] h-[64px] items-center">
            <div className="w-[24px] h-[24px] mt-2">
            <CiHome />
