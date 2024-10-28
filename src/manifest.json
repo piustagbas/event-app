@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Mobile Simulator Tool",
+    "version": "1.0",
+    "description": "A simple Chrome extension.",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "imges/*.png", 
+          "your/resource/path.ext" 
+        ],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  

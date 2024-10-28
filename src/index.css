@@ -1,0 +1,246 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  /* min-width: 320px;
+  min-height: 100vh; */
+  background-color: #121212;
+  color: white;
+  @apply bg-white;
+
+}
+
+.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #e0e0e0; /* Light text color */
+}
+
+.dark-mode .pagination{
+  background-color:#6A6676;
+ 
+
+}
+
+
+
+.dark-mode .boxhover:hover {
+
+  background-color: #3a3a3d;
+
+}
+
+
+/* .dark-mode .paging{
+  color: #fff;
+
+  Stack{
+    background-color: #6A6676;
+  }
+} */
+
+
+/* You can also style specific elements inside dark mode */
+.dark-mode a {
+  color: #bb86fc; /* Change link color */
+}
+
+.dark-mode .headingz{
+  background-color:#6A6676;
+}
+
+.dark-mode .historytop{
+  background-color: #6A6676;
+}
+
+.dark-mode .Stack, .dark-mode .totalpage{
+  background-color: #6A6676;
+  color: #fff;
+}
+
+.dark-mode .popupAtd{
+  
+  color: #fff;
+}
+
+
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p{
+  color: #fff; /* Change link color */
+}
+
+.dark-mode .summary,.dark-mode .registration , .dark-mode .history, .dark-mode .booking .dark-mode .datedrop, .dark-mode .CustomDatePicker{
+  background-color: #484554;
+  color: #fff;
+}
+
+/* Common styles */
+
+
+/* .dark-mode input, .dark-mode button {
+  background-color: #fff;;
+  color: #fff;
+  border: 1px solid #444;
+} */
+/* Pagination styles */
+
+.transition-transform {
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+.collapsed {
+  transform: translateX(-100%); /* Slide out to the left */
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e; /* Navbar background in dark mode */
+  color: white; /* Text color in dark mode */
+}
+
+.slider-container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.slider-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The circular knob inside the slider */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When checked, move the slider knob */
+.slider-checkbox:checked + .slider {
+  background-color: #2563EB; /* Blue for dark mode on */
+}
+
+.slider-checkbox:checked + .slider::before {
+  transform: translateX(26px); /* Moves the knob to the right */
+}
+
+.booking {
+  z-index: 1; /* Bring the history container above others */
+}
+
+input {
+  z-index: 2; /* Make sure the input is clickable */
+}
+
+select {
+  z-index: 2; /* Make sure the dropdown is clickable */
+}
+
+
+.parent-container {
+  height: auto; /* Or provide enough height to accommodate the children */
+}
+
+
+.flex-container {
+  flex: 1 1 auto; /* Allow the container to grow and shrink as needed */
+}
+
+.search-container {
+  flex-shrink: 0; /* Prevent the search box from shrinking */
+  flex-grow: 1;   /* Allow it to grow within the flex container */
+}
+input, select {
+  pointer-events: auto; /* Ensure click events work */
+}
+
+
+/* Add this in index.css */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
