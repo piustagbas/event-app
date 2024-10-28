@@ -420,11 +420,7 @@ const Eventhistory = () => {
                           handleCollapse(i);
                         }}
                       >
-                        
-                          { isCollapsed[i]
-                              ?  <FaAngleDown />
-                              :<FaAngleRight />}
-                      
+                        {isCollapsed[i] ? <FaAngleDown /> : <FaAngleRight />}
                       </button>
                     </div>
                     <p className="text-[#64748B] text-[15px] ml-4">
@@ -438,7 +434,7 @@ const Eventhistory = () => {
                       }`}
                     >
                       <img
-                        src={d.dotIcon}  
+                        src={d.dotIcon}
                         alt="doticon"
                         className="w-[6px] h-[6px]"
                       />
@@ -591,6 +587,45 @@ const Eventhistory = () => {
       ) : (
         <div>No event selected</div>
       )}
+
+      <div className="Menudiv flex w-[375px] h-[98px] justify-center items-center mb-3 text-[#64748B] sm:hidden">
+        <div className="flex w-[350px] justify-between h-[64px]">
+          <div className="mobilemenu flex flex-col  w-[62.5px] h-[64px] items-center">
+           <div className="w-[24px] h-[24px] mt-2">
+           <CiHome />
+           </div>
+            <p className="text-[#64748B]">Home</p>
+          </div>
+
+          <div className="mobilemenu flex flex-col w-[62.5px] h-[64px] items-center">
+          <div className="w-[24px] h-[24px] mt-2">
+            <LuCalendarDays />
+            </div>
+            <p className="text-[#64748B]">Events</p>
+          </div>
+
+          <div className="mobilemenu flex flex-col w-[62.5px] h-[64px] items-center">
+          <div className="w-[24px] h-[24px] mt-2">
+            <MdOutlineRecordVoiceOver />
+            </div>
+            <p className="text-[#64748B]">Speakers</p>
+          </div>
+
+          <div className="mobilemenu flex flex-col w-[62.5px] h-[64px] items-center">
+          <div className="w-[24px] h-[24px] mt-2">
+            <BiMessageSquareDetail />
+            </div>
+            <p className="text-[#64748B]">Reports</p>
+          </div>
+
+          <div className="mobilemenu flex flex-col w-[62.5px] h-[64px]  items-center ">
+              <div className="w-[24px] h-[24px] mt-2">
+            <CgProfile />
+            </div>
+            <p className="text-[#64748B]">Profile</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

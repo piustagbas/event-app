@@ -93,9 +93,19 @@ body {
   color: #fff; /* Change link color */
 }
 
-.dark-mode .summary,.dark-mode .registration , .dark-mode .history, .dark-mode .booking .dark-mode .datedrop, .dark-mode .CustomDatePicker{
+.dark-mode .summary,.dark-mode .registration , .dark-mode .history, .dark-mode .booking .dark-mode .datedrop, .dark-mode .CustomDatePicker, .dark-mode .Menudiv{
   background-color: #484554;
   color: #fff;
+}
+
+
+
+.mobilemenu:hover p {
+  color: #8576FF;
+}
+
+.mobilemenu:hover {
+  border-top: 2px solid #8576FF;
 }
 
 /* Common styles */
