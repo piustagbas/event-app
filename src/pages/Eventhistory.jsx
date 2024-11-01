@@ -310,14 +310,14 @@ const Eventhistory = () => {
   const displayedEvents = sortedEvents.slice(startIndex, endIndex);
 
   return (
-    <div className="flex flex-col justify-center  mt-6  h-full w-[375px] mb-5   sm:mt-0   sm:ml-0 sm:flex sm:flex-col sm:mx-auto sm:h-[800px]  sm:w-[1076px] sm:mb-9">
-      <div className="flex flex-col sm:mt-24 item-start h-full sm:h-[52px]">
+    <div className="flex flex-col justify-center  mt-6  h-full w-[375px] mb-5   md:mt-0   md:ml-0 md:flex md:flex-col md:mx-auto md:h-[800px]  md:w-[1076px] md:mb-9 sm:mt-36  sm:items-center  sm:ml-0 sm:flex sm:flex-col sm:mx-auto sm:h-full  sm:w-[700px] sm:mb-9">
+      <div className="flex flex-col md:mt-24 item-start h-full md:h-[52px] sm:h-full">
         <h3 className="font-medium ml-6 mt-2 text-[17px]  text-[#000000] sm:font-medium sm:text-2xl sm:ml-0  sm:text-[#000000]">
           Events History
         </h3>
-        <div className="flex flex-col gap-[6px] mt-3 items-center justify-center h-[286px] w-[375px] sm:mt-3 sm:flex sm:flex-row sm:gap-[8px] sm:items-center sm:w-[1076px] sm:h-[36px] sm:justify-between">
-          <div className=" flex flex-col sm:flex sm:flex-row sm:items-center sm:w-[664px] sm:h-[36px] gap-[8px]">
-            <di className="booking w-[335px] h-[36px] flex flex-row sm:flex sm:flex-row sm:w-[200px] sm:h-[36px] bg-white border border-[#E2E8F0] rounded-[2px] items-center relative z-10">
+        <div className="flex flex-col gap-[6px] mt-3 items-center justify-center h-[286px] w-[375px] md:mt-3 md:flex md:flex-row md:gap-[8px] md:items-center md:w-[1076px] md:h-[36px] md:justify-between sm:flex sm:flex-col sm:gap-[6px] sm:mt-3 sm:items-center sm:justify-center sm:h-full sm:w-[700px] text-start">
+          <div className=" flex flex-col sm:flex sm:flex-col sm:items-center sm:w-[700px] sm:h-[36px] gap-[8px]">
+            <di className="booking w-[335px] h-[36px] flex flex-row sm:w-[700px] sm:h-[36px] md:flex md:flex-row md:w-[335px] md:h-[36px]  bg-white border border-[#E2E8F0] rounded-[2px] items-center relative z-10">
               <img
                 src="imges/search.png"
                 alt=""
@@ -325,7 +325,7 @@ const Eventhistory = () => {
               />
               <input
                 type="text"
-                className="bg-white outline-none ml-2 w-[156px] h-[20px]  text-[#CBD5E1] relative z-10"
+                className="bg-white outline-none ml-2 w-[156px] h-[20px] md:w-[100px] sm:w-[600px] text-[#CBD5E1] relative z-10"
                 placeholder="search..."
                 value={searchTerm}
                 onChange={handleSearchChange}
@@ -347,11 +347,11 @@ const Eventhistory = () => {
             </h1>
           </div>
 
-          <div className="w-[335px] flex flex-col gap-[8px]  items-center sm:flex sm:flex-row sm:w-[332px] sm:items-center sm:gap-[8px]">
-            <div className="flex w-[335px] h-[36px] justify-between items-center">
+          <div className="w-[335px] flex flex-col gap-[8px]  items-center md:flex md:flex-row md:w-[332px] md:items-center md:gap-[8px] sm:flex sm:flex-col sm:w-[700px] sm:items-center sm:gap-[8px]">
+            <div className="flex w-[335px]  sm:w-[700px] h-[36px] justify-between items-center">
               <p className="text-[#334155]">Sort:</p>
               <select
-                className="history justify-center w-[140px] h-[36px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none sm:justify-center sm:w-[140px] sm:h-[36px] sm:rounded-[2px] sm:border sm:border-[#E2E8F0] sm:bg-[#FFFFFF] sm:text-[#000000] sm:focus:outline-none relative z-10"
+                className="history justify-center w-[140px] h-[36px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none sm:justify-center sm:w-[90px] sm:h-[36px] sm:rounded-[2px] sm:border sm:border-[#E2E8F0] sm:bg-[#FFFFFF] sm:text-[#000000] sm:focus:outline-none relative z-10"
                 onChange={(e) => setTimeSortOption(e.target.value)}
                 value={sortOption}
               >
@@ -362,7 +362,7 @@ const Eventhistory = () => {
               </select>
             </div>
 
-            <div className=" flex w-[335px] h-[36px] justify-between items-center">
+            <div className=" flex w-[335px] sm:w-[120px] sm:h-[36px] h-[36px] justify-between items-center">
               <div className="history">
                 <img
                   src="imges/dots-vertical.png"
@@ -371,8 +371,8 @@ const Eventhistory = () => {
                 />
               </div>
 
-              <div className="history flex w-[100px] h-[36px] justify-center border border-[#E2E8F0]  sm:flex sm:w-[100px] sm:h-[36px] sm:items-center sm:border sm:border-[#E2E8F0]">
-                <div className=" flex w-[80px] items-center justify-between">
+              <div className="history flex w-[100px] h-[36px] justify-center border border-[#E2E8F0]  md:flex md:w-[100px] md:h-[36px] md:items-center md:border md:border-[#E2E8F0]   sm:flex sm:w-[70px] sm:h-[36px] sm:items-center sm:border sm:border-[#E2E8F0]">
+                <div className=" flex w-[80px] sm:w-[90px] items-center justify-between">
                   <img src="imges/download.png" alt="" />
                   <p className="text-[#334155] pl-2">Export</p>
                 </div>
@@ -382,18 +382,18 @@ const Eventhistory = () => {
         </div>
       </div>
 
-      <div className=" mt-12 sm:flex sm:flex-col sm:h-[528px] sm:w-[1076px] sm:mt-3">
-        <div className="  sm:flex sm:flex-col sm:h-[528px] sm:w-[1076px] sm:mt-9">
+      <div className=" mt-12 sm:flex sm:flex-col sm:h-[528px] sm:w-[700px] sm:mb-32 sm:mt-3 md:flex md:flex-col m:dh-[528px] md:w-[1076px] md:mt-3">
+        <div className="  sm:flex sm:flex-col md:h-[528px] md:w-[1076px] md:mt-9 sm:h-[528px] sm:w-[700px] sm:mt-9">
           {/* Mobile View */}
-          <div className="historytop flex justify-between bg-[#F1F5F9] h-[48px] items-center mt-3 w-[375px] sm:hidden">
-            <div className=" flex ml-4 w-[330px] justify-between">
+          <div className="historytop flex justify-between bg-[#F1F5F9] h-[48px] items-center mt-3 w-[375px] sm:w-[700px] md:hidden">
+            <div className=" flex ml-4 w-[330px] sm:w-[650px] justify-between">
               <p className="text-[#64748B] pl-3">Event Name</p>
               <p className="text-[#64748B] pl-3">Status</p>
             </div>
           </div>
 
           {/* Default View */}
-          <div className="historytop hidden sm:flex bg-[#F1F5F9] h-[48px] items-center mt-3 ">
+          <div className="historytop hidden sm:hidden md:flex bg-[#F1F5F9] h-[48px] items-center mt-3 ">
             {eventheader.map((d, i) => (
               <div key={i} className="mt-4 w-[269px] h-[48px] ml-2 ">
                 <p className="text-[#64748B] pl-3 ">{d.title}</p>
@@ -409,9 +409,9 @@ const Eventhistory = () => {
               className="history flex flex-col items-center gap-[8px]"
               onClick={() => handleEventClick(d)} // This will now work for the entire div, except the button
             >
-              <div className="history flex flex-col sm:hidden hover:bg-[#F2F2F7] sm:hover:bg-[#434348] transition-colors duration-300">
-                <div className="flex justify-center bg-[#F1F5F9] h-[48px] items-center mt-3 w-[375px] sm:hidden">
-                  <div className="history flex  justify-around h-[48px] items-center mt-3 w-[375px] sm:hidden">
+              <div className="history flex flex-col md:hidden hover:bg-[#F2F2F7] sm:hover:bg-[#434348] transition-colors duration-300">
+                <div className="flex justify-center bg-[#F1F5F9] h-[48px] items-center mt-3 w-[375px] sm:w-[700px] md:hidden">
+                  <div className="history flex  justify-around h-[48px] items-center mt-3 w-[375px] sm:w-[600px]  sm:flex  sm:justify-around sm:h-[48px] sm:items-center  md:hidden">
                     <div className="flex items-center">
                       <button
                         className="pl-3 text-[#334155]"
@@ -453,7 +453,7 @@ const Eventhistory = () => {
 
                 {/* Additional content for collapsed view */}
                 {isCollapsed[i] && (
-                  <div className="history w-[343px] ml-3 flex justify-between pl-4 text-[#334155]">
+                  <div className="history w-[343px] sm:w-[570px] ml-3 flex justify-between pl-4 text-[#0c0c0c]">
                     {/* Add collapsed content here */}
                     <p>{d.eventSpeaker}</p>
                     <p>{d.eventDate}</p>
@@ -462,7 +462,7 @@ const Eventhistory = () => {
               </div>
 
               {/* Default Desktop View */}
-              <div className="boxhover hidden sm:flex items-center w-[1067px] h-[48px] hover:bg-[#d4d4dd] transition-colors duration-300">
+              <div className="boxhover hidden sm:hidden md:flex items-center w-[1067px] h-[48px] hover:bg-[#d4d4dd] transition-colors duration-300">
                 <div className="flex w-[708px] h-[48px] p-4">
                   <div className="flex w-[269px] h-[48px] justify-start">
                     <p className="text-[#64748B] w-[233px]">{d.eventName}</p>
@@ -504,8 +504,8 @@ const Eventhistory = () => {
       </div>
 
       {/* Pagination and Rows Selector */}
-      <div className="hidden sm:h-[36px] sm:flex sm:w-full sm:mt-24 sm:justify-between">
-        <div className="paging flex w-[208px] h-[36px] sm:flex sm:w-[1074px] sm:h-[36px]">
+      <div className="hidden sm:h-[36px] md:flex md:w-full md:mt-24 md:justify-between sm:flex sm:w-full sm:mt-24 sm:justify-between ">
+        <div className="paging flex w-[208px] h-[36px] sm:flex md:w-[1074px] md:h-[36px] sm:w-[700px] sm:h-[36px]">
           <Pagination
             count={totalPages}
             page={page}
@@ -544,7 +544,7 @@ const Eventhistory = () => {
       </div>
 
       {/* Mobile View Pagination */}
-      <div className="totalpage bg-white flex w-[375px] h-[36px] mt-3 justify-between items-center sm:hidden">
+      <div className="totalpage bg-white flex w-[375px] h-[36px] mt-3 justify-between items-center mb-12 md:hidden">
         <div className="paging flex w-[250px] h-[36px] sm:hidden">
           <Pagination
             count={totalPages}
@@ -582,14 +582,9 @@ const Eventhistory = () => {
         </div>
       </div>
 
-      {selectedEvent ? (
-        <EventPopup event={selectedEvent} onClose={handleClosePopup} />
-      ) : (
-        <div>No event selected</div>
-      )}
 
-      <div className="Menudiv flex w-[375px] h-[98px] justify-center items-center mb-3 text-[#64748B] sm:hidden">
-        <div className="flex w-[350px] justify-between h-[64px] mr-3">
+      <div className="Menudiv flex w-[375px]  h-[98px] sm:flex sm:w-[700px]  sm:h-[98px]  sm:justify-center sm:items-center sm:mt-0   justify-center items-center text-[#64748B] md:hidden">
+        <div className="flex w-[350px] sm:w-[650px] sm:h-[64px] justify-between h-[64px] mr-3">
           <div className="mobilemenu flex flex-col  w-[62.5px] h-[64px] items-center">
            <div className="w-[24px] h-[24px] mt-2">
            <CiHome />
@@ -626,6 +621,13 @@ const Eventhistory = () => {
           </div>
         </div>
       </div>
+
+      {selectedEvent ? (
+        <EventPopup event={selectedEvent} onClose={handleClosePopup} />
+      ) : (
+        <div>No event selected</div>
+      )}
+
     </div>
   );
 };

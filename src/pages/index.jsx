@@ -5,7 +5,7 @@ import Eventhistory from "./Eventhistory";
 
 const Landingpage = () => {
   return (
-    <div className="flex flex-col h-full w-[375px] mx-auto   sm:flex sm:flex-col sm:w-full sm:mx-auto sm:mr-11">
+    <div className="flex flex-col h-full w-[375px] mx-auto  md:flex md:flex-col md:w-full md:mx-auto md:mr-11   sm:flex sm:flex-col sm:w-full sm:h-full">
       <Navbar />
     </div>
   );

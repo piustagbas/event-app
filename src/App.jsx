@@ -8,6 +8,7 @@ import Landingpage from "./pages";
 import EventPopup from "./pages/EventPopup";
 import SummarySection from "./pages/SummarySection";
 import EventDetails from "./pages/EventDetails";
+import Eventhistory from "./pages/Eventhistory";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
         <Route path="/nav" element={<Navbar />} />
         <Route path="/sum" element={<SummarySection />} />
         <Route path="/det" element={<EventDetails />} />
+        <Route path="/his" element={<Eventhistory />} />
       </Routes>
     </BrowserRouter>
   );

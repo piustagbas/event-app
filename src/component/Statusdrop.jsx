@@ -28,17 +28,17 @@ const CustomDropdown = ({ onSelect }) => {
   return (
     <div className="relative">
       <div
-        className="flex history w-[335px] h-[36px] justify-center items-center sm:w-[88px] sm:h-[36px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] cursor-pointer"
+        className="flex history w-[335px]  sm:w-[700px] h-[36px] justify-center items-center md:w-[88px] sm:h-[36px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] cursor-pointer"
         onClick={toggleDropdown}
       >
-        <div className="history w-[335px] flex items-center justify-center h-[36px] sm:w-[90px] sm:h-[36px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none cursor-pointer">
+        <div className="history w-[335px] flex items-center justify-center h-[36px] sm:w-[700px] md:w-[90px] sm:h-[36px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none cursor-pointer">
           <p className="mr-3">{selectedOption}</p>
           <FaChevronDown />
         </div>
       </div>
 
       {isOpen && (
-        <div className="absolute mt-1 w-[335px] sm:w-[88px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] z-10">
+        <div className="absolute mt-1 w-[335px] md:w-[88px] sm:w-[60px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] z-10">
           {options.map((option) => (
             <div
               key={option.value}

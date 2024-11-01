@@ -11,6 +11,7 @@ const customStyles = {
   datePicker: {
     width: '100%',
     maxWidth: '375px',
+   
   },
 };
 
@@ -46,7 +47,7 @@ const CustomDatePicker = ({ selectedDate, onDateChange }) => {
         }}
       />
       <div
-        className="history flex items-center justify-center h-[36px] w-full max-w-[375px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none cursor-pointer"
+        className="history flex items-center justify-center h-[36px] w-full max-w-[375px] sm:w-[700px] rounded-[2px] border border-[#E2E8F0] bg-[#FFFFFF] text-[#000000] focus:outline-none cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="history text-[#334155] mr-2">{formatDate(selectedDate)}</span>

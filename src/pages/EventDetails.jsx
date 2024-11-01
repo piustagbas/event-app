@@ -67,18 +67,18 @@ const EventDetails = () => {
   };
 
   return (
-    <div className="h-full mt-3 sm:ml-8 sm:w-[1076px] sm:flex sm:flex-col sm:mx-auto sm:mt-12 ">
-      <h3 className="w-[249px] h-[20px] ml-5 font-[17px] sm:text-[22px] mb-2 text-[#000000] sm:ml-0 sm:w-[322px] sm:h-[20px] sm:font-medium">
+    <div className="h-full mt-3 md:ml-8 md:w-[1076px] md:flex md:flex-col md:mx-auto md:mt-12  items-start   sm:w-full sm:flex sm:flex-col sm:mx-auto sm:mt-12">
+      <h3 className="w-[249px] h-[20px] ml-5 md:ml-0 font-[17px] sm:text-[22px] mb-2 text-[#000000] sm:ml-4 sm:w-[322px] sm:h-[20px] sm:font-medium ">
         Welcome! Here’s your summary
       </h3>
       <SummarySection />
 
-      <div className="h-[650px] mt-2 w-[375px] sm:mt-9 sm:mb-9 sm:h-[320px] sm:w-[1076px]">
-        <div className="h-[610px] w-[375px] flex flex-col gap-[16px] items-center justify-center sm:gap-[8px] sm:flex-row sm:h-[320px] sm:w-[1076px] sm:mt-9">
+      <div className="h-[650px] mt-2 w-[375px] md:mt-9 md:mb-9 md:h-[320px] md:w-[1076px] sm:mt-24  sm:h-[320px] sm:w-full sm:mb-36">
+        <div className="h-[610px] w-[375px] flex flex-col gap-[16px] items-center  md:gap-[8px] md:flex-row md:h-[320px] md:w-[1076px] md:mt-9 sm:flex-col sm:h-full sm:w-[700px] sm:mt-9 sm:items-center sm:justify-center sm:gap-4 ">
        
 
-       <div className="flex flex-col mt-9">
-       <h1 className=" text-[17px] font-[500] sm:font-[500] sm:text-[22px] text-[#000000] mb-1">
+       <div className="flex flex-col mt-9 sm:w-[500px] sm:h-[320px]">
+       <h1 className=" text-[17px] font-[500] sm:ml-2 sm:font-[500] sm:text-[22px] text-[#000000] mb-1">
               Event Registrations per month
             </h1>
 
@@ -93,12 +93,12 @@ const EventDetails = () => {
        
 
           {/* React Slick Carousel with Custom Arrows */}
-          <div className="bg-cover bg-center w-[335px] h-[320px] sm:w-[510px] flex flex-col">
+          <div className="bg-cover bg-center w-[335px] h-[320px] md:w-[510px] md:h-[320px] sm:h-[320px] sm:ml-20 flex sm:bg-cover sm:bg-center flex-col sm:w-[500px] ">
             <Slider ref={sliderRef} {...settings}>
               {images.map((image, index) => (
                 <div key={index}>
                   <div
-                    className="flex flex-col items-center justify-center sm:mt-9 w-[335px]  sm:h-[320px] sm:w-[510px]"
+                    className="flex flex-col items-center justify-center sm:mt-9 w-[335px]  sm:h-[320px] sm:w-[500px]"
                     style={{
                       backgroundImage: `url('${image}')`,
                       backgroundSize: "cover",

@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import EventDetails from "../pages/EventDetails";
 import { CiHome } from "react-icons/ci";
@@ -7,7 +5,7 @@ import { LuCalendarDays } from "react-icons/lu";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { PiChatsCircleLight } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
-import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6"; 
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import { MdOutlineRecordVoiceOver } from "react-icons/md";
 import { BiMessageSquareDetail } from "react-icons/bi";
 
@@ -56,24 +54,23 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col h-full   sm:flex sm:flex-row sm:w-[240] sm:mx-auto sm:justify-start">
+    <div className="flex flex-col h-full md:flex md:flex-row md:w-full md:mx-auto md:justify-start   sm:flex sm:flex-col sm:w-full sm:mx-auto sm:justify-start">
       <div
-        className={`flex w-[375px]  flex-col justify-center h-full sm:flex sm:flex-col sm:w-[240px] sm:gap-8 sm:h-[1024px] transition-width duration-300 ${
+        className={`flex w-[375px] border border-green-500 flex-col justify-center h-full sm:flex sm:flex-col md:w-[240px] sm:gap-8 sm:h-full sm:w-full transition-width duration-300 ${
           isCollapsed ? "w-[80px]" : "w-[260px]"
         } ${darkMode ? "text-white bg-[#484554]" : "bg-white text-black"}`}
       >
-        <div className="flex items-center justify-between w-[360px] sm-[240px]">
-          <h2 className="text-[#2563EB] font-[600] ml-2">Full Logo</h2>
-          <img
-            src={menuIcon}
-            alt="show-nav-bar"
-            className="w-7 h-7 mt-2 ml-3 cursor-pointer sm:hidden" // Removed 'sm:hidden' for testing
-            onClick={toggleMenu}
-          />
-        </div>
-
-        <div className="hidden sm:w-[375px] sm:flex sm:flex-col sm:h-[1020px]">
-          <div className="flex flex-col w-[224px] mt-6 gap-4 ml-3">
+        <div className=" w-[375px] md:flex md:flex-col h-[1020px] hidden">
+          <div className=" md:flex md:ml-3 sm:items-center sm:justify-between sm:fixed  sm:w-[240px] border border-red-600 sm:hidden">
+            <h2 className="text-[#2563EB] font-[600] ml-2">Full Logo</h2>
+            <img
+              src={menuIcon}
+              alt="show-nav-bar"
+              className="w-7 h-7 mt-2 ml-3 cursor-pointer sm:hidden" // Removed 'sm:hidden' for testing
+              onClick={toggleMenu}
+            />
+          </div>
+          <div className="flex flex-col w-[224px] mt-12 gap-4 ml-3">
             {navItems.map((item, index) => (
               <div
                 key={index}
@@ -131,9 +128,18 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-[375px] h-full">
+        <div className="flex flex-col sm:w-[700px] w-[375px] sm:h-full ">
+          <div className=" flex ml-3 items-center justify-between w-[350px] sm:mt-4 sm:w-[680px] sm:mb-6 md:w-[240px]  md:hidden fixed bg-white">
+            <h2 className="text-[#2563EB] font-[600] ml-2 ">Full Logo</h2>
+            <img
+              src={menuIcon}
+              alt="show-nav-bar"
+              className="w-7 h-7 mt-2 ml-3 cursor-pointer" // Removed 'sm:hidden' for testing
+              onClick={toggleMenu}
+            />
+          </div>
           {isMenuOpen && (
-            <div className="w-[375px] flex flex-col">
+            <div className="w-[375px] sm:w-[700px] sm:h-[full] flex flex-col sm:mt-6 ">
               <div className="flex flex-col w-[375px] mt-6 gap-4 ml-3">
                 {navItems.map((item, index) => (
                   <div
@@ -156,47 +162,49 @@ const Navbar = () => {
                     </span>
                   </div>
                 ))}
-              </div>
-              {/* Dark Mode Toggle */}
-              <div className="nav-item dark-mode-toggle flex items-center mt-4 ml-3">
-                <label className="slider-container">
-                  <input
-                    type="checkbox"
-                    checked={darkMode}
-                    onChange={handleDarkModeToggle}
-                    className="slider-checkbox"
-                  />
-                  <span className="slider"></span>
-                </label>
-                <span
-                  className={`ml-4 transition-opacity duration-300 ${
-                    isCollapsed ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  Dark Mode
-                </span>
-              </div>
 
-              {/* User Info */}
-              <div className="flex h-[42px] items-center mt-6 ml-3">
-                <img
-                  src="imges/Avatar.png"
-                  alt=""
-                  className="w-[32px] h-[32px]"
-                />
-                <div
-                  className={`ml-3 text-start transition-opacity duration-300 ${
-                    isCollapsed ? "opacity-0" : "opacity-100"
-                  }`}
-                >
-                  <span className="block text-[12px] font-[400]">
-                    Rudra Devi
-                  </span>
-                  <span className="block text-[12px] font-[400]">
-                    rudra.devi@gmail.com
+                <div className="nav-item dark-mode-toggle flex items-center mt-4 ml-3  sm:flex sm:items-center sm:mt-4 sm:ml-3">
+                  <label className="slider-container">
+                    <input
+                      type="checkbox"
+                      checked={darkMode}
+                      onChange={handleDarkModeToggle}
+                      className="slider-checkbox"
+                    />
+                    <span className="slider"></span>
+                  </label>
+                  <span
+                    className={`ml-4 transition-opacity duration-300 ${
+                      isCollapsed ? "opacity-0" : "opacity-100"
+                    }`}
+                  >
+                    Dark Mode
                   </span>
                 </div>
+
+                <div className="flex h-[42px] items-center mt-6 ml-3">
+                  <img
+                    src="imges/Avatar.png"
+                    alt=""
+                    className="w-[32px] h-[32px]"
+                  />
+                  <div
+                    className={`ml-3 text-start transition-opacity duration-300 ${
+                      isCollapsed ? "opacity-0" : "opacity-100"
+                    }`}
+                  >
+                    <span className="block text-[12px] font-[400]">
+                      Rudra Devi
+                    </span>
+                    <span className="block text-[12px] font-[400]">
+                      rudra.devi@gmail.com
+                    </span>
+                  </div>
+                </div>
               </div>
+              {/* Dark Mode Toggle */}
+
+              {/* User Info */}
             </div>
           )}
         </div>
